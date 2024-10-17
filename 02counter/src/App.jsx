@@ -18,6 +18,23 @@ function App() {
     //counter = counter + 1; This wont work
     if (counter >= 1) setCounter(counter-1)
   }
+
+  //IMPORTANT INTERVIEW QUESTION
+  const specialCounter = () => {
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    //the output of above will be incremented by 1 only. 
+    //because useState function executes the setter function in a single batch in this case.
+
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+    //writing a callback function like above will help the setter function to propogate through each line
+    // thus incrementing the counter value to 1. therefore the output is incremented by 4
+  }
   return (
     <>
       <h1>Basanti Danced {counter} times</h1>
