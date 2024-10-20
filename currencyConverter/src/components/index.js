@@ -1,0 +1,6 @@
+
+//AMAZING WAY OF IMPORTING ALL COMPONENTS IN ONE SIGNLE LINE THROUGH THIS FILE
+import InputBox from './InputBox'
+
+
+export {InputBox}
