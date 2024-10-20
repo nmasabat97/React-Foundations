@@ -16,7 +16,7 @@ function App() {
   const swap = () => {
     setFrom(to)
     setTo(from)
-    setConvertedAmt(amt * currencyInfo[to])
+    setConvertedAmt(amt)
     setAmt(convertedAmt)
   }
 
